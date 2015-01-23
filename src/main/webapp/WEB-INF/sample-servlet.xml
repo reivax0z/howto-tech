@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewClass" value="reivax.norac.samplewebbapp.web.renderer.StringTemplateView"/>
+        <property name="requestContextAttribute" value="rc"/>
+    </bean>
+
+    <bean id="sampleStringTemplateFactory"
+          class="reivax.norac.samplewebbapp.web.renderer.StringTemplateFactory">
+        <constructor-arg value="Sample Test WebApp"/>
+        <constructor-arg value="/WEB-INF/templates"/>
+    </bean>
+
+</beans>
