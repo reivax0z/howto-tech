@@ -10,8 +10,8 @@
       <!-- Example row of columns -->
       <div class="row">
             $advice.steps:{ step |
-            <div class="col-md-6" id="step$step.id$">
-                <h2>Step $step.id$</h2>
+            <div class="col-md-6" id="step$step.number$">
+                <h2>Step $step.number$</h2>
                 <h4>$step.intro$</h4>
                 <p>$step.content$</p>
                 $if(step.pictureLink)$

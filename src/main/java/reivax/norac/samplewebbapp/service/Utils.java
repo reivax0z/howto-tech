@@ -33,7 +33,7 @@ public class Utils {
         return new Comparator<StepModel>() {
             @Override
             public int compare(StepModel o1, StepModel o2) {
-                return Integer.compare(o1.getId(), o2.getId());
+                return Integer.compare(o1.getNumber(), o2.getNumber());
             }
         };
     }

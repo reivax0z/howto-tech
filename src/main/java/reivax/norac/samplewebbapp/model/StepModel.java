@@ -1,13 +1,37 @@
 package reivax.norac.samplewebbapp.model;
 
+import org.hibernate.search.annotations.*;
+import org.hibernate.search.annotations.Index;
+
+import javax.persistence.*;
+
 /**
  * Created by xavier caron on 22/01/2015.
  */
+@Entity
+@Indexed
+@Table(name = "step")
 public class StepModel {
 
+    @ManyToOne
+    private HowToModel howto;
+
+    @Column(name = "intro")
+    @Field(index= org.hibernate.search.annotations.Index.YES, analyze= Analyze.YES)
     private String intro;
+
+    @Column(name = "content")
+    @Field(index= Index.YES, analyze= Analyze.YES)
     private String content;
+
+    @Column(name = "number")
+    private Integer number;
+
+    @Column(name = "picture_link")
     private String pictureLink;
+
+    @Id
+    @GeneratedValue
     private int id;
 
     @Override
@@ -57,5 +81,21 @@ public class StepModel {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public HowToModel getHowto() {
+        return howto;
+    }
+
+    public void setHowto(HowToModel howto) {
+        this.howto = howto;
+    }
+
+    public Integer getNumber() {
+        return number;
+    }
+
+    public void setNumber(Integer number) {
+        this.number = number;
     }
 }

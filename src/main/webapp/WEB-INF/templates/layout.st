@@ -28,6 +28,14 @@
           </button>
           <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-check"></span> How-To? | Technology made easier.</a>
         </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <form class="navbar-form navbar-right" role="search" action="/search" method="POST">
+            <div class="form-group">
+              <input type="text" name=text class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+        </div>
       </div>
     </nav>
 

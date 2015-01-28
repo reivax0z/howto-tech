@@ -8,6 +8,7 @@ public class StepBuilder {
     private String intro;
     private String content;
     private String pictureLink;
+    private Integer number;
     private int id;
 
     private StepBuilder(){}
@@ -21,6 +22,11 @@ public class StepBuilder {
 
     public StepBuilder withContent(String content){
         this.content = content;
+        return this;
+    }
+
+    public StepBuilder withNumber(Integer number){
+        this.number = number;
         return this;
     }
 

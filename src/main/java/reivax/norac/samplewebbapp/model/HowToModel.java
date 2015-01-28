@@ -1,16 +1,35 @@
 package reivax.norac.samplewebbapp.model;
 
+import org.hibernate.search.annotations.*;
+import org.hibernate.search.annotations.Index;
+
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.persistence.*;
 
 /**
  * Created by xavier caron on 22/01/2015.
  */
+@Entity
+@Indexed
+@Table(name = "how_to")
 public class HowToModel {
 
+    @Column(name = "title")
+    @Field(index=Index.YES, analyze= Analyze.YES)
     private String title;
+
+    @Column(name = "intro")
+    @Field(index=Index.YES, analyze= Analyze.YES)
     private String intro;
+
+    @Id
+    @GeneratedValue
     private int id;
+
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "howto", cascade = CascadeType.ALL)
+    @IndexedEmbedded
     private List<StepModel> steps = new ArrayList<StepModel>();
 
     @Override

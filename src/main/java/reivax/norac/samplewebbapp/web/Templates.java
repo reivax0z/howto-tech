@@ -7,4 +7,5 @@ public interface Templates {
 
     String HOMEPAGE_TEMPLATE = "homepage/welcome";
     String ADVICE_TEMPLATE = "advice/content";
+    String SEARCH_RESULTS_TEMPLATE = "search/results";
 }

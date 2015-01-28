@@ -6,6 +6,6 @@ package reivax.norac.samplewebbapp.web;
 public class ApplicationUrls {
 
     public static final String HOME = "/";
-    public static final String TEST = "/test";
+    public static final String SEARCH = "/search";
     public static final String ADVICE = "/howto";
 }
