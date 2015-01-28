@@ -18,10 +18,22 @@ CREATE TABLE step (
 );
 
 INSERT INTO how_to (title, intro)
-VALUES ('Copy images to your computer?', 'This step-by-step guide will explain to you how to copy images from a memory stick to your computer.');
+VALUES (
+  'Copy images to your computer?',
+  'This step-by-step guide will explain to you how to copy images from a memory stick to your computer.'
+  );
 
 INSERT INTO how_to (title, intro)
-VALUES ('Publish your pictures online?', 'This step-by-step guide will explain to you how to upload images from your computer to Google+ (using Picasa) and share them with your friends and family.');
+VALUES (
+  'Publish your pictures online?',
+  'This step-by-step guide will explain to you how to upload images from your computer to Google+ (using Picasa) and share them with your friends and family.'
+  );
+
+INSERT INTO how_to (title, intro)
+VALUES (
+  'Manage your Gmail Contacts',
+  'This step-by-step guide will explain to you how to manage (add/edit/remove entries in) your contact list of your Gmail account.'
+  );
 
 INSERT INTO step (howto_id, number, intro, content)
   SELECT id,
